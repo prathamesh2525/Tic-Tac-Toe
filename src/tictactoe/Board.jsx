@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import Square from "./Square"
+import ReactAudioPlayer from "react-audio-player"
 
 const Board = () => {
   const [state, setState] = useState(Array(9).fill(null))
@@ -46,6 +47,7 @@ const Board = () => {
       {isWinner ? (
         <>
           {isWinner} won the game
+          <ReactAudioPlayer src="../yay.mp3" autoPlay />
           <button className="btn" onClick={Again}>
             Play Again
           </button>
